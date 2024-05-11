@@ -61,7 +61,7 @@ Before you begin, ensure you have the following installed:
 
 2. **Setup Front End Project:**
    - Open Visual Studio Code and navigate to the directory where you cloned or downloaded the repository.
-   - Go to the 'raise' folder using command `cd raise`.
+   - Go to the 'raise' folder using command `cd frontend`.
    - Run `npm install` to install the required node modules.
    - Use the command `ng serve` to start the application. It will run at `http://localhost:4200/` which directly leads to the role selection page at `http://localhost:4200/roleselection`.
 
