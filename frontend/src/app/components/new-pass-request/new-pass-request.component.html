@@ -1,0 +1,56 @@
+
+<div class="container">
+  <h2>New Visitor Pass Request</h2>
+  <form [formGroup]="passRequestForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="raisedByEmployee">Raised By Employee</label>
+      <input type="text" formControlName="raisedByEmployee" class="form-control" id="raisedByEmployee" placeholder="Employee Name">
+    </div>
+
+    <div class="form-group">
+      <label for="visitorTypes">Visitor Type</label>
+      <select formControlName="visitorTypes" class="form-control" id="visitorTypes">
+        <option *ngFor="let type of visitorTypes" [value]="type.id">{{type.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="purposeOfVisit">Purpose of Visit</label>
+      <input type="text" formControlName="purposeOfVisit" class="form-control" id="purposeOfVisit" placeholder="Purpose of Visit">
+    </div>
+
+    <div class="form-group">
+      <label for="requestProccessedByEmployee">Processed By Employee</label>
+      <input type="text" formControlName="requestProccessedByEmployee" class="form-control" id="requestProccessedByEmployee" placeholder="Employee Name">
+    </div>
+
+    <div class="form-group">
+      <label for="visitDate">Visit Date</label>
+      <input type="date" formControlName="visitDate" class="form-control" id="visitDate">
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" formControlName="location" class="form-control" id="location" placeholder="Location of Visit">
+    </div>
+
+    <div class="form-group">
+      <label for="visitorName">Visitor Name</label>
+      <input type="text" formControlName="visitorName" class="form-control" id="visitorName" placeholder="Visitor's Full Name">
+    </div>
+
+    <div class="form-group">
+      <label for="visitorAge">Visitor Age</label>
+      <input type="number" formControlName="visitorAge" class="form-control" id="visitorAge" placeholder="Visitor's Age">
+    </div>
+
+    <div class="form-group">
+      <label for="comingFrom">Coming From</label>
+      <input type="text" formControlName="comingFrom" class="form-control" id="comingFrom" placeholder="Visitor's Origin">
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!passRequestForm.valid">Submit Request</button>
+  </form>
+
+  <div *ngIf="submissionMessage" class="alert alert-success mt-3">{{submissionMessage}}</div>
+</div>

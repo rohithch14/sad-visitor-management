@@ -1,0 +1,20 @@
+<div class="role-selection-form">
+    <h2 class="text-center">Enter Your Role</h2>
+    <form (ngSubmit)="submitForm()" class="form-group">
+      <div class="form-row">
+        <label for="role" class="form-label">Select Your Role:</label>
+        <select id="role" [(ngModel)]="userRole" name="role" class="form-select">
+          <option value="Employee">Employee</option>
+          <option value="SecurityHead">Security Head</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="pin" class="form-label">Enter Name/Location:</label>
+        <input type="text" id="pin" [(ngModel)]="userPIN" name="pin" class="form-control">
+      </div>
+      <div class="form-row text-center mt-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+  

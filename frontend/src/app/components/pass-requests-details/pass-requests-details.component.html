@@ -1,0 +1,66 @@
+<div *ngIf="visitorPassRequest">
+    <h2>Visitor Pass Request Details</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2"><strong>Request ID:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.visitorPassRequestID }}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Raised By:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.raisedByEmployee }}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Visit Date:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.visitDate | date: 'mediumDate' }}</div>
+      </div>
+      <div class="row" *ngIf="visitorPassRequest">
+        <div class="col-sm-2"><strong>Visitor Type:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest?.visitorTypes?.visitorType }}</div>
+      </div>
+    
+      <div *ngIf="visitorPassRequest.purposeOfVisit" class="row">
+        <div class="col-sm-2"><strong>Purpose of Visit:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.purposeOfVisit }}</div>
+      </div>
+      
+    <div class="row">
+        <div class="col-sm-2"><strong>Request Status:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.requestStatus }}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Processed By:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.requestProccessedByEmployee }}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Processed On:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.requestProccessedOn | date: 'mediumDate' }}</div>
+      </div>
+      <div class="row" *ngIf="visitorPassRequest.cancellationReason">
+        <div class="col-sm-2"><strong>Cancellation Reason:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.cancellationReason }}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Location:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.location }}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Visitor Name:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.visitorName }}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Visitor Age:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.visitorAge }}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2"><strong>Coming From:</strong></div>
+        <div class="col-sm-10">{{ visitorPassRequest.comingFrom }}</div>
+      </div>
+    
+  
+    </div>
+ 
+   
+    
+  </div>
+  <app-approve-reject-request *ngIf="visitorPassRequest?.visitorPassRequestID" [requestId]="visitorPassRequest.visitorPassRequestID">
+</app-approve-reject-request>

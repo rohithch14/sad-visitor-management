@@ -1,0 +1,38 @@
+<!-- src/app/components/pass-request-list/pass-request-list.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Visitor Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="userRole === 'Employee'">
+          <a class="nav-link" [routerLink]="['/new-pass-request']">New Pass Request</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Request ID</th>
+      <th>Raised By</th>
+      <th>Visit Date</th>
+      <th>Visitor types</th>
+      <th>Actions</th>
+      
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let request of visitorPassRequests">
+      <td>{{ request.visitorPassRequestID }}</td>
+      <td>{{ request.raisedByEmployee }}</td>
+      <td>{{ request.visitDate | date }}</td>
+      <td>{{ request.visitorTypes.visitorType}}</td>
+      <button [routerLink]="['/pass-requests-details',request.visitorPassRequestID]" class="btn btn-info">View Details</button>
+    </tr>
+    </tbody>
+  </table>
+  

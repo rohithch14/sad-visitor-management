@@ -1,0 +1,7 @@
+<div class="approve-reject-form">
+  <button class="btn btn-success" (click)="approveRequest()">Approve</button>
+  <button class="btn btn-danger" (click)="toggleRejectionReason()">Reject</button>
+  <div *ngIf="showRejectionReason">
+    <input type="text" [(ngModel)]="rejectionReason" placeholder="Rejection Reason" class="form-control" />
+    <button class="btn btn-warning mt-2" (click)="rejectRequest()">Submit Rejection</button>
+  </div>

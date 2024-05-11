@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Defines a project with a model version of 4.0.0 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Inherits default configuration from Spring Boot Starter Parent -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!-- Defines the coordinates of the project -->
+	<groupId>com.visitormanagement </groupId>
+	<artifactId>visitor-management</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- Provides a human-readable name of the project -->
+	<name>visitor-management</name>
+
+	<!-- Provides a description of the project -->
+	<description>Demo project for Spring Boot</description>
+
+	<!-- Specifies properties that can be used throughout the POM -->
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<!-- Lists the dependencies of the project -->
+	<dependencies>
+		<!-- Spring Boot Actuator: Provides production-ready features like health check-up, auditing, metrics gathering, HTTP tracing etc -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- Spring Boot Data JPA: Makes it easy to easily implement JPA based repositories -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Spring Boot Starter Web: Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Spring Boot Starter Test: Starter for testing Spring Boot applications with libraries including JUnit, Hamcrest and Mockito -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- MySQL Connector Java: MySQL JDBC and R2DBC driver -->
+		<dependency>      
+			<groupId>mysql</groupId>    
+			<artifactId>mysql-connector-java</artifactId>     
+			<version>8.0.23</version>  
+		</dependency>
+	</dependencies>
+
+	<!-- Build and plugin configuration -->
+	<build>
+		<plugins>
+			<!-- Spring Boot Maven Plugin: Provides Spring Boot support in Maven, allowing packaging executable jar or war archives and running an application “in-place” -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

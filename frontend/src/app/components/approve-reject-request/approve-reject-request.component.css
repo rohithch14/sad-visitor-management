@@ -1,0 +1,42 @@
+/* General Styles for the Form */
+.approve-reject-form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.approve-reject-form .btn {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.btn-success {
+  background-color: #4CAF50; /* Green */
+  border: none;
+}
+
+.btn-danger {
+  background-color: #f44336; /* Red */
+  border: none;
+}
+
+.btn-warning {
+  background-color: #ff9800; /* Orange */
+  border: none;
+}
+
+/* Rejection Reason Input and Button */
+.approve-reject-form div {
+  margin-top: 20px;
+}
+
+.approve-reject-form input {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.approve-reject-form .btn-warning {
+  display: block;
+  margin: 20px auto 0;
+}

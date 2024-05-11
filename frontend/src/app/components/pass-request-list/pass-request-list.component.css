@@ -1,0 +1,48 @@
+.table {
+    border: 1px solid #ddd;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .table a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .table button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .table button:hover {
+    background-color: #0056b3;
+  }
